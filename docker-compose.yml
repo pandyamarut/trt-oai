@@ -10,7 +10,8 @@ services:
     volumes:
       - ./model-cache:/var/cache/tensorrt-llm
     environment:
-      - MODEL_PATH=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+      - MODEL_PATH=${MODEL_NAME}
+      - HF_TOKEN=${HF_TOKEN}
     networks:
       - trt-network
     deploy:

@@ -23,4 +23,5 @@ RUN mkdir -p /var/cache/tensorrt-llm
 EXPOSE 8000
 
 # Run using the Python directory directly
-CMD ["python3", "server.py", "TinyLlama/TinyLlama-1.1B-Chat-v1.0"]
+# CMD ["python3", "server.py", "${MODEL_PATH}"]
+ENTRYPOINT ["sh", "-c", "python3 server.py ${MODEL_PATH}"]

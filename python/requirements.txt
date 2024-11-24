@@ -5,3 +5,5 @@ uvicorn
 pydantic
 numpy
 torch
+huggingface-hub
+python-dotenv

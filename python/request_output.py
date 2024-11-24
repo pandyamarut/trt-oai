@@ -1,6 +1,8 @@
 import asyncio
 from dataclasses import dataclass
 from typing import AsyncIterator, List, Optional
+import traceback  # For capturing the current exception stack trace
+
 
 @dataclass
 class Output:
@@ -30,3 +32,13 @@ class RequestOutput:
     async def aresult(self):
         while not self._done:
             await asyncio.sleep(0.1)  # Prevent tight loop
+
+
+class CppExecutorError(RuntimeError):
+    def __init__(self, message: Optional[str] = None):
+        self.message = message
+        self.stack_trace = traceback.format_exc()  # Captures the stack trace of the most recent exception
+        super().__init__(message)
+
+    def __str__(self):
+        return f"{self.message}\nStack trace:\n{self.stack_trace}"

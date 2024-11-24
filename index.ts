@@ -136,9 +136,9 @@ const BENCHMARK_PROMPTS = [
       total_time: performance.now() - startTime,
       requests_per_second: (results.filter(r => r.status === 'fulfilled').length / 
         ((performance.now() - startTime) / 1000)),
-      requests_and_responses: results.map(result => 
-        result.status === 'fulfilled' ? result.value : result.reason
-      )
+      // requests_and_responses: results.map(result => 
+      //   result.status === 'fulfilled' ? result.value : result.reason
+      // )
     };
   
     await Bun.write('benchmark-results.json', JSON.stringify(benchmarkResults, null, 2));

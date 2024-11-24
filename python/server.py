@@ -6,6 +6,24 @@ from transformers import AutoTokenizer
 from tensorrt_llm import LLM, BuildConfig
 from tensorrt_llm import LlmArgs
 from serve import OpenAIServer
+from dotenv import load_dotenv
+
+
+
+from huggingface_hub import login
+import os
+
+def hf_login():
+    load_dotenv()
+    # Get the Hugging Face token    
+    huggingface_token = os.getenv("HF_TOKEN")
+
+    if huggingface_token:
+        print("Hugging Face token found. Logging in...")
+        login(huggingface_token)
+    else:
+        print("No Hugging Face token found. Skipping login.")
+
 
 
 @click.command("trtllm-serve")
@@ -59,10 +77,15 @@ def main(model: str, tokenizer: str, host: str, port: int, max_beam_width: int,
          max_batch_size: int, max_num_tokens: int, max_seq_len: int,
          tp_size: int, pp_size: int, kv_cache_free_gpu_memory_fraction: float,
          trust_remote_code: bool):
+         
     """Running an OpenAI API compatible server
 
     MODEL: model name | HF checkpoint path | TensorRT engine path
     """
+
+    ## Add HF_LOGIN
+    hf_login()
+
     build_config = BuildConfig(max_batch_size=max_batch_size,
                                max_num_tokens=max_num_tokens,
                                max_beam_width=max_beam_width,
