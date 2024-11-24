@@ -1,0 +1,7 @@
+tensorrt_llm
+transformers
+fastapi
+uvicorn
+pydantic
+numpy
+torch

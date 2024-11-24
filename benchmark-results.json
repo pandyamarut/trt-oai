@@ -1,0 +1,233 @@
+{
+  "total_response_time_in_milliseconds_p50": 0,
+  "total_response_time_in_milliseconds_p90": 0,
+  "total_response_time_in_milliseconds_p99": 0,
+  "average_latency": 584.7684501000003,
+  "total_succeeded": 10,
+  "total_failed": 0,
+  "number_of_requests": 10,
+  "total_time": 813.5795830000025,
+  "requests_per_second": 12.291218293266011,
+  "requests_and_responses": [
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Explain quantum computing in simple terms."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Quantum computing is a type of computing that uses the properties of quantum mechanics to perform calculations in a more efficient way than classical computing. The most significant advantage of quantum computing is that it can perform computations that are significantly faster than classical computers.\n\nIn quantum computing, quantum bits, or qubits, are used to represent the state of a particle or an atom. These qubits can exist in multiple states simultaneously, allowing them to perform complex calculations with higher accuracy. Unlike classical computers",
+      "status": "Succeeded",
+      "latency": 527.9944590000014,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Write a short story about a robot."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "There was a robot named Max, a mechanical marvel of design and technology. Max had been constructed by an advanced engineering team, and they had worked tirelessly to bring it to life. The team had spent years meticulously crafting Max's every detail, from the intricately designed body to the highly advanced sensors and computer systems.\n\nMax was a work of art, and he stood tall and proud in his laboratory, where he was put through a series of",
+      "status": "Succeeded",
+      "latency": 528.0523329999996,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "What are the benefits of exercise?"
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Exercise has numerous benefits for both physical and mental health, including:\n\n1. Strengthening muscles: Regular exercise helps to build and strengthen your muscles, which can help you with everyday tasks such as walking, climbing stairs, and lifting bags of groceries.\n\n2. Reducing stress and anxiety: Exercise can help to reduce stress and anxiety by releasing endorphins and increasing seroton",
+      "status": "Succeeded",
+      "latency": 527.9959999999992,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "How does photosynthesis work?"
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Photosynthesis is a process that occurs in the chloroplasts of plants, fungi, and certain algae. During photosynthesis, light energy is absorbed by chlorophyll molecules and transferred to the organelle called the thylakoid membrane, where it is used to create energy for the plant or organism. The energy is then used to convert carbon dioxide into glucose, which is used for energy production.\n\nHere'",
+      "status": "Succeeded",
+      "latency": 527.9685830000017,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Explain the concept of blockchain."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Blockchain is a decentralized, distributed ledger technology (DLT) that records transactions using a secure and encrypted digital ledger of records, called blocks. Each block in the chain contains a list of transactions and the corresponding public and private keys that sign the transactions. The transactions are anonymously recorded in a tamper-proof and immutable way, creating a secure and transparent record of transactions.\n\nThe main advantage of blockchain is its ability to create a transparent and tamper",
+      "status": "Succeeded",
+      "latency": 527.8376669999998,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Explain quantum computing in simple terms."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Quantum computing is a type of computing that uses the properties of quantum mechanics to perform calculations in a more efficient way than classical computing. The most significant advantage of quantum computing is that it can perform computations that are significantly faster than classical computers.\n\nIn quantum computing, quantum bits, or qubits, are used to represent the state of a particle or an atom. These qubits can exist in multiple states simultaneously, allowing them to perform complex calculations with higher accuracy than classical computing.\n",
+      "status": "Succeeded",
+      "latency": 527.6957500000026,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Write a short story about a robot."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "There was a robot named Max, a mechanical marvel of design and technology. Max had been constructed by an advanced engineering team, and they had worked tirelessly to bring it to life. The team had spent years meticulously crafting Max's every detail, from the intricately designed body to the highly advanced sensors and computer systems.\n\nMax was a work of art, and he stood tall and proud in his laboratory, ready to take on any task. He",
+      "status": "Succeeded",
+      "latency": 527.3429170000018,
+      "finishedAt": "2024-11-24T05:26:28.970Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "What are the benefits of exercise?"
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Exercise has numerous benefits for both physical and mental health, including:\n\n1. Strengthening muscles: Regular exercise helps to build and strengthen your muscles, which can help you with everyday tasks such as walking, climbing stairs, and lifting bags of groceries.\n\n2. Reducing stress and anxiety: Exercise can help to reduce stress and anxiety by releasing endorphins, the natural feel-",
+      "status": "Succeeded",
+      "latency": 527.5567919999994,
+      "finishedAt": "2024-11-24T05:26:28.971Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "How does photosynthesis work?"
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Photosynthesis is a process that occurs in the leaves, stems, and roots of plants. During photosynthesis, plants absorb energy from sunlight and carbon dioxide (CO2) to produce sugars (glucose and fructose) and oxygen gas (O2). Here's how it works:\n\n1. Light energy from sunlight is absorbed by chlorophyll, a pigment that exists in green plants (e.",
+      "status": "Succeeded",
+      "latency": 812.5242079999989,
+      "finishedAt": "2024-11-24T05:26:29.256Z"
+    },
+    {
+      "request": {
+        "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant."
+          },
+          {
+            "role": "user",
+            "content": "Explain the concept of blockchain."
+          }
+        ],
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "stream": false
+      },
+      "response": "Blockchain is a decentralized, distributed ledger technology (DLT) that records transactions using a secure and encrypted digital ledger called a blockchain. It is based on the concept of cryptography and distributed consensus.\n\nHere's how it works:\n\n1. Everyone on the network participates in the creation of the blockchain, which is a series of blocks that are linked together to form a chain.\n\n2. A new block is created with a",
+      "status": "Succeeded",
+      "latency": 812.715791999999,
+      "finishedAt": "2024-11-24T05:26:29.256Z"
+    }
+  ]
+}
