@@ -1,0 +1,27 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  python-server:
+    build: 
+      context: .
+      dockerfile: python/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model-cache:/var/cache/tensorrt-llm
+    environment:
+      - MODEL_PATH=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+  bun-server:
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - PYTHON_SERVER_URL=http://python-server:8000
+      - API_KEY=test-api-key
+    depends_on:
+      - python-server

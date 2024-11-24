@@ -13,7 +13,7 @@ const envSchema = z.object({
   PYTHON_SERVER_URL: z.string().default('http://216.81.245.7:42781'),
   API_KEY: z.string().default('test-api-key'),
 });
-
+const PYTHON_SERVER_URL = process.env.PYTHON_SERVER_URL || 'http://localhost:8000';
 export const config = envSchema.parse(process.env);
 
 // src/server.ts
