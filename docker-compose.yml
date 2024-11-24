@@ -1,27 +1,75 @@
-# docker-compose.yml
-version: '3.8'
-
+version: "3.10"
 services:
   python-server:
+    container_name: python-server
     build: 
       context: .
       dockerfile: python/Dockerfile
     ports:
-      - "8000:8000"
+      - "8000:8000"  # Bind to the host
     volumes:
       - ./model-cache:/var/cache/tensorrt-llm
     environment:
       - MODEL_PATH=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    networks:
+      - trt-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   bun-server:
+    container_name: bun-server
     build:
       context: .
-      dockerfile: src/Dockerfile
+      dockerfile: Dockerfile
     ports:
-      - "3001:3001"
+      - "3001:3001"  # Bind to the host
     environment:
       - PORT=3001
       - PYTHON_SERVER_URL=http://python-server:8000
       - API_KEY=test-api-key
+    networks:
+      - trt-network
     depends_on:
       - python-server
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  nginx:
+    container_name: trt-nginx
+    restart: always
+    image: nginx:1.21.3-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./.nginx/conf/:/etc/nginx/conf.d/:ro
+    depends_on:
+      - python-server
+      - bun-server
+    networks:
+      - trt-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  trt-network:
+    driver: bridge
+
+volumes:
+  model-cache:
+    driver: local

@@ -5,7 +5,7 @@ from transformers import AutoTokenizer
 
 from tensorrt_llm import LLM, BuildConfig
 from tensorrt_llm import LlmArgs
-from python.serve import OpenAIServer
+from serve import OpenAIServer
 
 
 @click.command("trtllm-serve")
@@ -17,7 +17,7 @@ from python.serve import OpenAIServer
               "Specify this value only if using TensorRT engine as model.")
 @click.option("--host",
               type=str,
-              default="localhost",
+              default="0.0.0.0",
               help="Hostname of the server.")
 @click.option("--port", type=int, default=8000, help="Port of the server.")
 @click.option("--max_beam_width",

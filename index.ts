@@ -30,9 +30,9 @@ const app = new Elysia()
 // Chat completions endpoint
 app.post('/v1/chat/completions', async ({ body, set }) => {
   try {
-    const response = await fetch(`${config.PYTHON_SERVER_URL}/v1/chat/completions`, {
+    const response = await fetch(`${PYTHON_SERVER_URL}/v1/chat/completions`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.API_KEY}` },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
 
@@ -94,7 +94,7 @@ const BENCHMARK_PROMPTS = [
       testCases.map(async (testCase) => {
         const requestStart = performance.now();
         try {
-          const response = await fetch(`${config.PYTHON_SERVER_URL}/v1/chat/completions`, {
+          const response = await fetch(`${PYTHON_SERVER_URL}/v1/chat/completions`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(testCase)

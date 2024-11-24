@@ -16,8 +16,8 @@ from transformers import PreTrainedTokenizer
 # yapf: disable
 # from tensorrt_llm import CppExecutorError
 from tensorrt_llm import LLM
-from python.request_output import RequestOutput
-from python.openai_protocol import (
+from request_output import RequestOutput
+from openai_protocol import (
     ChatCompletionLogProbs, ChatCompletionLogProbsContent,
     ChatCompletionNamedToolChoiceParam, ChatCompletionRequest,
     ChatCompletionResponse, ChatCompletionResponseChoice,

@@ -17,7 +17,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "recharts": "^2.13.3",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
