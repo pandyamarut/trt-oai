@@ -23,5 +23,6 @@ RUN mkdir -p /var/cache/tensorrt-llm
 EXPOSE 8000
 
 # Run using the Python directory directly
-# CMD ["python3", "server.py", "${MODEL_PATH}"]
-ENTRYPOINT ["sh", "-c", "python3 server.py ${MODEL_PATH}"]
+# ENTRYPOINT ["sh", "-c", "python3 server.py ${MODEL_PATH}"]
+
+ENTRYPOINT ["sh", "-c", "python3 server.py ${MODEL_PATH} ${MAX_SEQ_LEN:+--max_seq_len ${MAX_SEQ_LEN}} ${MAX_BATCH_SIZE:+--max_batch_size ${MAX_BATCH_SIZE}}"]

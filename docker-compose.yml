@@ -12,6 +12,8 @@ services:
     environment:
       - MODEL_PATH=${MODEL_NAME}
       - HF_TOKEN=${HF_TOKEN}
+      - MAX_SEQ_LEN=${MAX_SEQ_LEN}
+      - MAX_BATCH_SIZE=${MAX_BATCH_SIZE}
     networks:
       - trt-network
     deploy:
